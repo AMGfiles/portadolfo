@@ -1,0 +1,24 @@
+ul{
+    list-style-type: none;
+    width: 20%;
+    background-color: green;
+    padding: 0;
+    margin: 0;
+}
+
+li a{
+    display: block; /*se maneje como elemento en bloque*/
+    background-color: rgb(121, 255, 121);
+    padding: 12px;
+    text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+li a:hover{
+    background-color: rgb(78, 193, 58);
+}
+
+li a.activo{
+    background-color: rgb(0, 91, 0);
+    color: white;
+}
