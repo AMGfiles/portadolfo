@@ -29,13 +29,12 @@ li a.activo{
 }
 p{
     text-align: justify;
-    font-family: "Roboto Mono", monospace;
 }
 
 
 .capa1{
     margin-left: 25%;
-    font-family: "Poppins", sans-serif;
+    font-family: "Roboto Mono", monospace;
 }
 
 @font-face {
