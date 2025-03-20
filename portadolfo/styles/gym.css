@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #000000, #3f3f3f);
+    overflow-x: hidden; 
+}
+
+/* Header */
+header {
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#eslogan {
+    font-family: 'Anton', sans-serif;
+    font-style: italic;
+    font-size: 6em;
+}
+
+/* Navegación */
+nav {
+    background: linear-gradient(to right, #fffb00, #ffee00);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    font-family: 'Anton', sans-serif;
+    font-size: 1.4em;
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: linear-gradient(to right, #3f3f3f, #000000);
+    color: #ffffff;
+}
+
+/* Contenedor principal */
+.contable {
+    min-height: calc(100vh - 70px); /* Resta la altura del footer */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 10%;
+    flex-grow: 1;
+}
+
+/* Texto */
+.texto-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.texto-container h1 {
+    margin-top: 10%;
+    font-family: 'Anton', sans-serif;
+    color: yellow;
+    font-size: 3em;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.texto-container p {
+    margin-top: 10%;
+    font-family: 'Rubik', sans-serif;
+    color: white;
+    font-size: 25px;
+}
+.imagenes-container {
+    height: 50%;
+    padding-left: 5%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-45deg); /* Rotar el contenedor */
+}
+
+.imagenes-container img {
+    border-radius: 8px;
+    margin: 10px 0;
+    width: 230px; /* Ajusta el tamaño según sea necesario */
+    transform: rotate(45deg); /* Rotar las imágenes en sentido contrario */
+}
+
+footer {
+    background-color: yellow;
+    text-align: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-top: 2px solid #000;
+    width: 100%;
+    height: 12%;
+    margin-top: auto; 
+    box-sizing: border-box; 
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    color: #000;
+}
+footer a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 10px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+
