@@ -1,0 +1,42 @@
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--espaciado-mediano) 50px;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    will-change: transform;
+}
+
+.encabezado__logo {
+    font-size: var(--tamano-fuente-mediano);
+    font-weight: bold;
+}
+#logo {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.lista-navegacion {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.enlace-navegacion {
+    text-decoration: none;
+    color: var(--color-principal);
+    font-size: var(--tamano-fuente-normal);
+    transition: color 0.3s;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.enlace-navegacion:hover {
+    color: #666;
+}

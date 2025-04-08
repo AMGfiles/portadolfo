@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+/* Variables */
+:root {
+    --color-principal: #333;
+    --color-secundario: #f9f9f9;
+    --color-texto-claro: #fff;
+    --color-fondo-secundario: #f5f5f5;
+    --espaciado-grande: 40px;
+    --espaciado-mediano: 20px;
+    --espaciado-pequeno: 10px;
+    --tamano-fuente-grande: 32px;
+    --tamano-fuente-mediano: 24px;
+    --tamano-fuente-normal: 18px;
+    --sombra-cajas: 0 12px 30px rgba(0, 0, 0, 0.9);
+    --borde-redondeado: 15px;
+}
+
+/* Reinicio de estilos básicos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    color: var(--color-principal);
+    line-height: 1.6;
+    background-color: var(--color-fondo-secundario);
+}
+
+/* Encabezado */
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--espaciado-mediano) 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.encabezado__logo {
+    font-size: var(--tamano-fuente-mediano);
+    font-weight: bold;
+}
+#logo {
+    width: 120px;
+    height: 70px;
+    object-fit: cover;
+}
+
+.lista-navegacion {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.enlace-navegacion {
+    text-decoration: none;
+    color: var(--color-principal);
+    font-size: var(--tamano-fuente-normal);
+    transition: color 0.3s;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+.enlace-navegacion:hover {
+    color: #666;
+}
+
+/* Sección Hero */
+.seccion-hero-con-caracteristicas {
+    position: relative;
+    margin-top: 80px;
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-texto-claro);
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+        url('images/image.png') no-repeat center center;
+    background-size: cover;
+}
+
+.hero__contenido {
+    max-width: 800px;
+    padding: 0 var(--espaciado-mediano);
+    z-index: 1;
+}
+
+.hero__titulo {
+    font-size: clamp(3rem, 4vw, 2rem);
+    margin-bottom: var(--espaciado-grande);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+/* Características */
+.contenedor-caracteristicas {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--espaciado-mediano);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.caracteristica {
+    height: 200px;
+    flex: 1;
+    min-width: 200px;
+    max-width: 250px;
+    padding: var(--espaciado-mediano);
+    text-align: center;
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.caracteristica:hover {
+    transform: translateY(-15px);
+}
+
+.caracteristica__titulo {
+    font-size: var(--tamano-fuente-mediano);
+    font-weight: normal;
+    font-family: 'Red Hat Text', sans-serif;
+    margin-top: var(--espaciado-pequeno);
+}
+
+.img_caracteristica {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+/* Sección Nuestra Manera */
+.seccion-nuestra-manera {
+    padding: var(--espaciado-grande) 0;
+    background: 
+        linear-gradient(rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9)),
+        url('images/fondo-textura.jpg') center/cover fixed;
+    text-align: center;
+}
+.contenedor-nuestra-manera {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: var(--espaciado-grande);
+    background-color: rgba(22, 22, 22, 0.92);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+}
+
+.titulo-nuestra-manera {
+    font-size: var(--tamano-fuente-mediano);
+    margin-bottom: var(--espaciado-mediano);
+    color: var(--color-secundario);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
+.titulo-nuestra-manera::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: var(--color-secundario);
+}
+
+.texto-nuestra-manera {
+    margin-top: var(--espaciado-mediano);
+    margin-bottom: var(--espaciado-mediano);
+    font-size: var(--tamano-fuente-normal);
+    line-height: 1.8;
+    color: var(--color-secundario);
+    font-family: 'Noto Sans', sans-serif;
+}
+.imagen-nuestra {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    margin-top: var(--espaciado-grande);   
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    margin-top: var(--espaciado-mediano);
+}
+
+
+/* Estilos para la sección de modelos populares */
+.seccion-modelos-populares {
+    padding: var(--espaciado-grande) 0;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-modelos {
+    flex-direction: row;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: var(--tamano-fuente-mediano);
+    margin-bottom: var(--espaciado-grande);
+    color: var(--color-principal);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-principal);
+}
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--espaciado-mediano);
+}
+
+.modelo-reloj {
+    width: 280px;
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-reloj:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-reloj {
+    width: 200px;
+    height: 30  0px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.info-reloj {
+    padding: var(--espaciado-mediano);
+    text-align: center;
+}
+
+.marca-reloj {
+    font-weight: bold;
+    font-size: var(--tamano-fuente-normal);
+    color: var(--color-principal);
+    margin-bottom: var(--espaciado-pequeno);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.nombre-modelo {
+    font-size: calc(var(--tamano-fuente-normal) - 2px);
+    color: #666;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Responsive Design */
+
+
+@media (max-width: 768px) {
+    .grid-modelos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .imagen-reloj {
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-modelos {
+        grid-template-columns: 1fr;
+    }
+    
+    .titulo-seccion {
+        font-size: var(--tamano-fuente-normal);
+    }
+    
+    .imagen-reloj {
+        height: 220px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero {
+        height: 50vh;
+        min-height: 400px;
+    }
+    
+    .contenedor-caracteristicas {
+        margin-top: -80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: row;
+        padding: var(--espaciado-mediano);
+        position: relative;
+        background-color: #fff;
+    }
+    
+    .lista-navegacion {
+        margin-top: var(--espaciado-mediano);
+        gap: 20px;
+    }
+    
+    .seccion-hero-con-caracteristicas {
+        margin-top: 0;
+    }
+    
+    .hero {
+        height: 40vh;
+        min-height: 300px;
+    }
+    
+    .hero__titulo {
+        font-size: 1.8rem;
+    }
+    
+    .contenedor-caracteristicas {
+        margin-top: -60px;
+        flex-direction: row;
+        align-items: center;
+        padding: 0 var(--espaciado-mediano);
+    }
+    .img_caracteristica {
+        width: 50px;
+        height: 50px;
+    }
+    .caracteristica__titulo {
+        font-size: 1.2rem;
+    }
+    
+    .caracteristica {
+        max-width: auto;
+        width: auto;
+        height: 150px;
+    }
+
+    .seccion-nuestra-manera {
+        padding: var(--espaciado-mediano) 0;
+        background-attachment: scroll;
+    }
+    
+    .contenedor-nuestra-manera {
+        padding: var(--espaciado-mediano);
+        margin: 0 var(--espaciado-mediano);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero__titulo {
+        font-size: 1.5rem;
+    }
+    
+    .lista-navegacion {
+        flex-direction: row;
+        align-items: center;
+        gap: var(--espaciado-pequeno);
+    }
+    
+    .hero {
+        height: 35vh;
+    }
+    
+    .contenedor-caracteristicas {
+        margin-top: -40px;
+    }
+
+    .titulo-nuestra-manera {
+        font-size: 1.3rem;
+    }
+    
+    .texto-nuestra-manera {
+        font-size: 1rem;
+    }
+}
