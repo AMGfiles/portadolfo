@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript" src="script/obtener.js"></script>
+    <link rel="stylesheet" href="styles/formestilo.css">
+</head>
+<body>
+    <h1>Registro de usuario</h1>
+    <form name="formulario">
+        <label for="user">Nombre de usuario:</label>
+        <input type="text" name="user" id="user" placeholder="Usuario">
+        <br>
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass">
+        <br>
+        <label for="carrera">Carrera:</label>
+        <select name="carrera" id="carrera">
+            <option value="ITI">Ing. Tec. Información</option>
+            <option value="ITEM">Ing. Telematica</option>
+        </select>
+        <br>
+        <label for="genero">Género:</label> <br>
+        <div class="radio-group">
+            <input type="radio" name="genero" id="femenino" value="F">
+            <label for="femenino">Femenino</label>
+        </div>
+        <div class="radio-group">
+            <input type="radio" name="genero" id="masculino" value="M">
+            <label for="masculino">Masculino</label>
+        </div>
+        <div class="radio-group">
+            <input type="checkbox" name="priv" id="priv">
+            <label for="priv">Acepto los terminos y condiciones de uso y privacidad</label>
+        </div>
+        <br>
+        <input type="button" value="Obtener" name="enviar" id="enviar" onclick="leer()">
+    </form>
+    <div id="cont"></div>
+</body>
+</html>
