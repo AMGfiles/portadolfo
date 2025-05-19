@@ -1,0 +1,57 @@
+body {
+    font-family: sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+input[type="number"], select, button {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+button {
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #398539;
+}
+
+#mostrar {
+    background-color: #e9ecef;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    margin-top: 20px;
+    text-align: center;
+     position: relative;
+    bottom: -200px;
+    right: 450px;
+}
+
+#aqui {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
