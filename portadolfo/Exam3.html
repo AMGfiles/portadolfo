@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Estacionamiento</title>
+    <link rel="stylesheet" href="styles/calpag.css">
+    <script type="text/javascript" src="script/aPagar.js"></script>
+</head>
+<body>
+    <form>
+        <h2>Pagos de Estacionamiento</h2>
+        <input type="number" id="numhora" placeholder="Número de horas" required>
+        <select id="tip" required>
+            <option value="" disabled selected>Selecciona el tipo de vehículo</option>
+            <option value="1">Auto chico</option>
+            <option value="2">Camioneta</option>
+            <option value="3">Camión</option>
+        </select>
+        <button type="button" onclick="calcular()">Calcular total a pagar</button>
+    </form>
+    <div id="mostrar">
+        <p id="aqui">Total a pagar: $0.00</p>
+    </div>
+</body>
+</html>
