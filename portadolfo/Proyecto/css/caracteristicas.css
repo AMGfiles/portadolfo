@@ -1,0 +1,114 @@
+/* caracteristicas.css */
+.contenedor-caracteristicas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--espaciado-mediano);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+    position: relative;
+    z-index: 10;
+    margin-top: -100px;
+    margin-bottom: var(--espaciado-grande);
+}
+
+.caracteristica {
+    height: 200px;
+    width: calc(25% - var(--espaciado-mediano)); /* 4 por fila */
+    min-width: 200px;
+    padding: var(--espaciado-mediano);
+    text-align: center;
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+.caracteristica:hover {
+    transform: translateY(-15px);
+}
+
+.caracteristica__titulo {
+    font-size: var(--tamano-fuente-mediano);
+    font-weight: normal;
+    font-family: 'Red Hat Text', sans-serif;
+    margin-top: var(--espaciado-pequeno);
+}
+
+.img_caracteristica {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+/* Responsive Design - Pantallas grandes (default) */
+@media (min-width: 1025px) {
+    .contenedor-caracteristicas {
+        flex-wrap: nowrap; /* Mantener en una sola fila */
+    }
+    .caracteristica {
+        flex: 1; /* Ocupar espacio disponible */
+        min-width: auto;
+        max-width: none;
+    }
+}
+
+/* Responsive Design - Pantallas medianas */
+@media (max-width: 1024px) and (min-width: 765px) {
+    .caracteristica {
+        display: inline;
+        flex-direction:row;
+        width: 100%;
+        max-width: 200px;
+        max-height: 150px;
+    }
+    .caracteristica__titulo {
+        font-size: var(--tamano-fuente-normal);
+    }
+    .caracteristica:hover {
+        transform: translateY(-10px);
+    }
+    .img_caracteristica {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Design - Pantallas pequeñas (cuadrícula de 4) */
+@media (max-width: 768px) {
+    .contenedor-caracteristicas {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Cuadrícula de 4 */
+        gap: var(--espaciado-pequeno);
+    }
+    .caracteristica {
+        width: 100%;
+        height: auto;
+        min-height: 120px;
+        padding: var(--espaciado-pequeno);
+    }
+    .img_caracteristica {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Responsive Design - Móviles muy pequeños */
+@media (max-width: 480px) {
+    .contenedor-caracteristicas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+    .caracteristica {
+        min-height: 100px;
+        min-width: 100px;
+    }
+    .caracteristica__titulo {
+        font-size: 0.9rem;
+    }
+}

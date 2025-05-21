@@ -1,0 +1,456 @@
+/* Variables actualizadas con nueva paleta */
+:root {
+    --color-principal: #1a1a1a; /* Negro más intenso */
+    --color-secundario: #f9f9f9; /* Fondo más claro */
+    --color-texto-claro: #ffffff;
+    --color-fondo-secundario: #f0f0f0;
+    --color-acento: #014781; /* Azul elegante en lugar de dorado */
+    --color-acento-claro: #0077cc;
+    --color-acento-secundario: #6c757d; /* Gris para detalles */
+    --color-exito: #28a745;
+    --color-borde: #d9d9d9;
+    --color-texto-oscuro: #2c3e50;
+    --color-texto-medio: #495057;
+    --color-texto-claro: #6c757d;
+    
+    --espaciado-grande: 60px;
+    --espaciado-mediano: 30px;
+    --espaciado-pequeno: 15px;
+    
+    --tamano-fuente-grande: 2.5rem;
+    --tamano-fuente-mediano: 1.8rem;
+    --tamano-fuente-normal: 1.1rem;
+    --tamano-fuente-articulo: 1.2rem; /* Tamaño aumentado para artículos */
+    
+    --sombra-cajas: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --borde-redondeado: 8px;
+    --transicion-rapida: 0.3s ease;
+}
+
+/* Estilos Base */
+body {
+    font-family: 'Red Hat Text', sans-serif;
+    color: var(--color-texto-oscuro);
+    line-height: 1.7; /* Mayor interlineado para mejor lectura */
+    background-color: var(--color-secundario);
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 600; /* Más negrita para los títulos */
+    color: var(--color-texto-oscuro);
+}
+
+/* Hero Section */
+.blog-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('../images/image21.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--color-fondo-secundario);
+    padding: var(--espaciado-grande) 0;
+    text-align: center;
+    margin-top: 120px;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-pequeno);
+}
+.hero-content h1 {
+    font-size: var(--tamano-fuente-grande);
+    margin-bottom: var(--espaciado-pequeno);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: var(--color-fondo-secundario);
+}
+
+.blog-hero h1 {
+    font-size: var(--tamano-fuente-grande);
+    margin-bottom: var(--espaciado-pequeno);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.blog-hero p {
+    font-size: var(--tamano-fuente-normal);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contenedor Principal */
+.blog-container {
+    display: flex;
+    max-width: 1300px;
+    margin: var(--espaciado-grande) auto;
+    padding: 0 var(--espaciado-pequeno);
+    gap: var(--espaciado-mediano);
+}
+
+.blog-main {
+    flex: 1;
+    min-width: 0; /* Permite que se ajuste mejor en responsive */
+}
+
+.blog-sidebar {
+    flex: 0 0 350px; /* Sidebar un poco más ancho */
+}
+
+/* Formulario de Artículos */
+.blog-form {
+    background: white;
+    padding: var(--espaciado-mediano);
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    margin-bottom: var(--espaciado-mediano);
+    border-top: 4px solid var(--color-acento); /* Borde más grueso */
+}
+
+.blog-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: var(--espaciado-pequeno);
+    color: var(--color-acento);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.form-group {
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 14px; /* Más padding para mejor tacto */
+    border: 1px solid var(--color-borde);
+    border-radius: var(--borde-redondeado);
+    font-family: 'Red Hat Text', sans-serif;
+    font-size: var(--tamano-fuente-normal);
+    transition: var(--transicion-rapida);
+    background-color: var(--color-secundario);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: var(--color-acento);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.1);
+    background-color: white;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px; /* Área de texto más grande */
+}
+
+.btn-submit {
+    background: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1.1rem;
+    border-radius: var(--borde-redondeado);
+    cursor: pointer;
+    transition: var(--transicion-rapida);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+}
+
+.btn-submit:hover {
+    background: var(--color-acento-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Lista de Artículos - AHORA MÁS GRANDES */
+.blog-posts {
+    margin-top: var(--espaciado-mediano);
+}
+
+.blog-posts h2 {
+    font-size: 1.8rem; /* Más grande */
+    margin-bottom: var(--espaciado-mediano); /* Más espacio */
+    color: var(--color-principal);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-borde);
+}
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una sola columna para artículos grandes */
+    gap: var(--espaciado-mediano); /* Más espacio entre artículos */
+}
+
+.post-card {
+    background: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    overflow: hidden;
+    transition: var(--transicion-rapida);
+    border-left: 4px solid var(--color-acento); /* Borde lateral */
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.post-image {
+    height: 250px; /* Imagen más grande */
+    background-color: var(--color-fondo-secundario);
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    padding: var(--espaciado-mediano); /* Más padding */
+}
+
+.post-title {
+    font-size: 1.5rem; /* Título más grande */
+    margin-bottom: 12px;
+    color: var(--color-texto-oscuro);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.post-meta {
+    font-size: 1rem; /* Texto más grande */
+    color: var(--color-texto-claro);
+    margin-bottom: var(--espaciado-pequeno);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.post-meta i {
+    color: var(--color-acento);
+    font-size: 1.1rem;
+}
+
+.post-excerpt {
+    color: var(--color-texto-medio);
+    margin-bottom: var(--espaciado-pequeno);
+    line-height: 1.8; /* Mayor interlineado */
+    font-size: var(--tamano-fuente-articulo); /* Texto más grande */
+}
+
+.read-more {
+    color: var(--color-acento);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: var(--espaciado-pequeno);
+    transition: var(--transicion-rapida);
+    font-size: 1.1rem;
+}
+
+.read-more:hover {
+    color: var(--color-acento-claro);
+    gap: 12px;
+}
+
+/* Sidebar */
+.sidebar-widget {
+    background: white;
+    padding: var(--espaciado-mediano); /* Más padding */
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    margin-bottom: var(--espaciado-mediano);
+    border-top: 3px solid var(--color-acento-secundario);
+}
+
+.sidebar-widget h3 {
+    font-size: 1.4rem; /* Más grande */
+    margin-bottom: var(--espaciado-pequeno);
+    color: var(--color-acento-secundario);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--color-borde);
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+}
+
+.categories-list li {
+    margin-bottom: 10px;
+}
+
+.categories-list a {
+    display: block;
+    padding: 12px 15px; /* Más grandes */
+    color: var(--color-texto-medio);
+    border-radius: var(--borde-redondeado);
+    transition: var(--transicion-rapida);
+    font-size: 1.05rem;
+    border-left: 3px solid transparent;
+}
+
+.categories-list a:hover {
+    background: rgba(0, 86, 179, 0.05);
+    color: var(--color-acento);
+    border-left: 3px solid var(--color-acento);
+    padding-left: 20px;
+}
+
+.featured-post {
+    margin-top: var(--espaciado-pequeno);
+}
+
+.featured-post img {
+    width: 100%;
+    height: 180px; /* Imagen más grande */
+    object-fit: cover;
+    border-radius: var(--borde-redondeado);
+    margin-bottom: var(--espaciado-pequeno);
+}
+
+.featured-post h4 {
+    font-size: 1.3rem; /* Más grande */
+    margin-bottom: 10px;
+    color: var(--color-texto-oscuro);
+}
+
+.featured-post p {
+    font-size: 1rem; /* Más grande */
+    color: var(--color-texto-medio);
+    margin-bottom: var(--espaciado-pequeno);
+    line-height: 1.6;
+}
+
+.newsletter input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--color-borde);
+    border-radius: var(--borde-redondeado);
+    margin-bottom: var(--espaciado-pequeno);
+    font-size: 1rem;
+}
+
+.newsletter button {
+    width: 100%;
+    padding: 12px;
+    background: var(--color-acento-secundario);
+    color: white;
+    border: none;
+    border-radius: var(--borde-redondeado);
+    cursor: pointer;
+    transition: var(--transicion-rapida);
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.newsletter button:hover {
+    background: var(--color-texto-medio);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .blog-container {
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 992px) {
+    .blog-container {
+        flex-direction: column;
+    }
+    
+    .blog-sidebar {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--espaciado-mediano);
+        margin-top: var(--espaciado-mediano);
+    }
+    
+    .newsletter {
+        grid-column: span 2;
+    }
+    
+    .posts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --espaciado-grande: 50px;
+        --espaciado-mediano: 25px;
+        --tamano-fuente-grande: 2.2rem;
+    }
+    
+    .blog-hero {
+        margin-top: 100px;
+        padding: var(--espaciado-grande) var(--espaciado-mediano);
+    }
+    
+    .post-image {
+        height: 200px;
+    }
+    
+    .post-content {
+        padding: var(--espaciado-mediano);
+    }
+}
+
+@media (max-width: 576px) {
+    :root {
+        --espaciado-grande: 40px;
+        --espaciado-mediano: 20px;
+        --espaciado-pequeno: 12px;
+    }
+    
+    .blog-sidebar {
+        grid-template-columns: 1fr;
+    }
+    
+    .newsletter {
+        grid-column: span 1;
+    }
+    
+    .post-title {
+        font-size: 1.3rem;
+    }
+    
+    .post-excerpt {
+        font-size: 1.05rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .blog-form h2,
+    .blog-posts h2 {
+        font-size: 1.4rem;
+    }
+    
+    .sidebar-widget h3 {
+        font-size: 1.2rem;
+    }
+    
+    input[type="text"],
+    textarea {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - WatchMakers</title>
+    <link rel="stylesheet" href="PDF/contacto-cita.css">
+    <link rel="stylesheet" href="css/encabezado1.css">
+    <link rel="stylesheet" href="footer.css">
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@400;500;700&family=Red+Hat+Text:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado__logo"><img id="logo" src="logos/black_on_trans.png" alt="WatchMakers"></div>
+        <nav class="encabezado__navegacion">
+            <ul class="lista-navegacion">
+                <li class="item-navegacion menu-desplegable">
+                    <a href="index.html" class="enlace-navegacion">Relojes <span class="flecha">▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="relojes-caballero.html" class="enlace-submenu">Relojes de caballero</a></li>
+                        <li><a href="relojes-dama.html" class="enlace-submenu">Relojes de dama</a></li>
+                        <li><a href="relojes-segunda-mano.html" class="enlace-submenu">Relojes de segunda mano</a></li>
+                        <li><a href="relojes-automaticos.html" class="enlace-submenu">Relojes automáticos</a></li>
+                    </ul>
+                </li>
+                <li class="item-navegacion menu-desplegable">
+                    <a href="#" class="enlace-navegacion">Servicios <span class="flecha">▼</span></a>
+                    <ul class="submenu">
+                        <li><a href="contacto-cita.html" class="enlace-submenu">Contacto de cita</a></li>
+                        <li><a href="preguntas-frecuentes.html" class="enlace-submenu">Preguntas frecuentes</a></li>
+                        <li><a href="blog.html" class="enlace-submenu">Blog</a></li>
+                    </ul>
+                </li>
+                <li class="item-navegacion"><a href="#" class="enlace-navegacion">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cita-hero">
+        <div class="hero-content">
+            <h1>Agendar Cita</h1>
+            <p>Programa una visita para conocer nuestros exclusivos relojes</p>
+        </div>
+    </section>
+
+    <main class="cita-container">
+        <section class="informacion-cita">
+            <div class="informacion-content">
+                <h2><i class="fas fa-info-circle"></i> Información importante</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horario de atención</h3>
+                        <p>Lunes a Viernes: 10:00 - 20:00<br>Sábados: 10:00 - 18:00</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Ubicación</h3>
+                        <p>Calle Urbano Villalón 500, 78360 San Luis Potosí, SLP</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-calendar-check"></i>
+                        <h3>Confirmación</h3>
+                        <p>Recibirás un PDF con los detalles de tu cita</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="formulario-cita">
+            <div class="form-container">
+                <h2>Formulario de Cita</h2>
+                <p class="form-subtitle">Complete los siguientes datos para programar su visita</p>
+                
+                <form id="citaForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo*</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Correo electrónico*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono*</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha">Fecha preferida*</label>
+                            <input type="date" id="fecha" name="fecha" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="hora">Hora preferida*</label>
+                            <select id="hora" name="hora" required>
+                                <option value="">Seleccione una hora</option>
+                                <option value="10:00">10:00 AM</option>
+                                <option value="11:00">11:00 AM</option>
+                                <option value="12:00">12:00 PM</option>
+                                <option value="13:00">1:00 PM</option>
+                                <option value="14:00">2:00 PM</option>
+                                <option value="15:00">3:00 PM</option>
+                                <option value="16:00">4:00 PM</option>
+                                <option value="17:00">5:00 PM</option>
+                                <option value="18:00">6:00 PM</option>
+                                <option value="19:00">7:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="motivo">Motivo de la cita*</label>
+                        <select id="motivo" name="motivo" required>
+                            <option value="">Seleccione un motivo</option>
+                            <option value="compra">Asesoría para compra</option>
+                            <option value="mantenimiento">Servicio de mantenimiento</option>
+                            <option value="valuacion">Valuación de reloj</option>
+                            <option value="personalizacion">Personalización</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comentarios">Comentarios adicionales</label>
+                        <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn-generar-cita">
+                            <i class="fas fa-calendar-plus"></i> Generar Cita
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <section class="confirmacion-cita" id="confirmacion" style="display: none;">
+            <div class="confirmacion-content">
+                <div class="confirmacion-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>¡Cita Agendada con Éxito!</h2>
+                <p>Hemos programado tu cita y te hemos enviado un correo con los detalles.</p>
+                <button class="btn-descargar-pdf" id="btnPDF">
+                    <i class="fas fa-file-pdf"></i> Descargar Comprobante
+                </button>
+                <p class="confirmacion-nota">Presenta este comprobante al llegar a nuestra tienda.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-lujo">
+        <div class="contenedor-footer">
+            <div class="columna-footer">
+                <h3 class="titulo-footer">WatchMakers</h3>
+                <p class="texto-footer">Expertos en relojería fina desde 2010.</p>
+            </div>
+            <div class="columna-footer">
+                <h3 class="titulo-footer">Contacto</h3>
+                <ul class="lista-contacto">
+                    <li><i class="icono-contacto">📞</i> 444 8190 729</li>
+                    <li><i class="icono-contacto">✉️</i> citas@watchmakers.com</li>
+                </ul>
+            </div>
+            <div class="columna-footer">
+                <h3 class="titulo-footer">Horario</h3>
+                <ul class="lista-horario">
+                    <li>Lunes-Viernes: 10am - 8pm</li>
+                    <li>Sábado: 10am - 6pm</li>
+                    <li>Domingo: Cerrado</li>
+                </ul>
+            </div>
+        </div>
+        <div class="derechos-autor">
+            <p>&copy; 2025 WatchMakers. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- jsPDF desde CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Script personalizado -->
+    <script type="text/javascript" src="PDF/contacto-cita.js"></script>
+
+</body>
+</html>

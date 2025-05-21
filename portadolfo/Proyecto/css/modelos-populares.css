@@ -1,0 +1,360 @@
+/* modelos-populares.css */
+.seccion-modelos-populares {
+    padding: var(--espaciado-grande) 0;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-modelos {
+    flex-direction: column;
+    position: relative;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: var(--tamano-fuente-grande);
+    margin-bottom: var(--espaciado-grande);
+    color: var(--color-principal);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-principal);
+}
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--espaciado-mediano);
+    margin-bottom: var(--espaciado-grande);
+}
+
+.modelo-reloj {
+
+    margin-top: var(--espaciado-mediano);
+    width: 280px;
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modelo-reloj:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-reloj {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.info-reloj {
+    padding: var(--espaciado-mediano);
+    text-align: center;
+}
+
+.marca-reloj {
+    font-weight: bold;
+    font-size: var(--tamano-fuente-normal);
+    color: var(--color-principal);
+    margin-bottom: var(--espaciado-pequeno);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.nombre-modelo {
+    font-size: calc(var(--tamano-fuente-normal) - 2px);
+    color: #666;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* modelos-populares.css - Versión Responsiva Mejorada */
+.seccion-modelos-populares {
+    padding: var(--espaciado-grande) 0;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-modelos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: var(--tamano-fuente-grande);
+    margin-bottom: var(--espaciado-grande);
+    color: var(--color-principal);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-principal);
+}
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--espaciado-mediano);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modelo-reloj {
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+.modelo-reloj:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-reloj {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.info-reloj {
+    padding: var(--espaciado-mediano);
+    text-align: center;
+}
+
+.marca-reloj {
+    font-weight: bold;
+    font-size: var(--tamano-fuente-normal);
+    color: var(--color-principal);
+    margin-bottom: var(--espaciado-pequeno);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.nombre-modelo {
+    font-size: calc(var(--tamano-fuente-normal) - 2px);
+    color: #666;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Media Queries Mejoradas */
+/* modelos-populares.css - Versión Responsiva Mejorada */
+.seccion-modelos-populares {
+    padding: var(--espaciado-grande) 0;
+    background-color: var(--color-secundario);
+}
+
+.contenedor-modelos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-mediano);
+}
+
+.titulo-seccion {
+    text-align: center;
+    font-size: var(--tamano-fuente-grande);
+    margin-bottom: var(--espaciado-grande);
+    color: var(--color-principal);
+    font-family: 'Red Hat Display', sans-serif;
+    position: relative;
+}
+
+.titulo-seccion::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--color-principal);
+}
+
+.grid-modelos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: var(--espaciado-mediano);
+    margin: 0 auto;
+    width: 100%;
+}
+
+.modelo-reloj {
+    background-color: white;
+    border-radius: var(--borde-redondeado);
+    box-shadow: var(--sombra-cajas);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 280px;
+}
+
+.modelo-reloj:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-reloj {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+    padding: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.info-reloj {
+    padding: var(--espaciado-mediano);
+    text-align: center;
+}
+
+.marca-reloj {
+    font-weight: bold;
+    font-size: var(--tamano-fuente-normal);
+    color: var(--color-principal);
+    margin-bottom: var(--espaciado-pequeno);
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.nombre-modelo {
+    font-size: calc(var(--tamano-fuente-normal) - 2px);
+    color: #666;
+    font-family: 'Red Hat Text', sans-serif;
+}
+
+/* Media Queries Mejoradas */
+@media (max-width: 1024px) {
+    .grid-modelos {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    }
+    
+    .modelo-reloj {
+        max-width: 220px;
+    }
+    
+    .imagen-reloj {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .seccion-modelos-populares {
+        padding: var(--espaciado-mediano) 0;
+    }
+    
+    .grid-modelos {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: var(--espaciado-pequeno);
+    }
+    
+    .modelo-reloj {
+        max-width: 180px;
+    }
+    
+    .info-reloj {
+        padding: var(--espaciado-pequeno);
+    }
+    
+    .marca-reloj {
+        font-size: 0.95rem;
+    }
+}
+
+/* Cambio clave aquí: Mostrar 2 columnas en móviles */
+@media (max-width: 600px) {
+    .grid-modelos {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 100%;
+        gap: var(--espaciado-pequeno);
+    }
+    
+    .modelo-reloj {
+        max-width: 100%;
+    }
+    
+    .imagen-reloj {
+        aspect-ratio: 3/4;
+        padding: 10px;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ajustes adicionales para móviles muy pequeños */
+@media (max-width: 480px) {
+    .contenedor-modelos {
+        padding: 0 var(--espaciado-pequeno);
+    }
+    
+    .grid-modelos {
+        gap: 10px;
+    }
+    
+    .info-reloj {
+        padding: 10px;
+    }
+    
+    .marca-reloj {
+        font-size: 0.85rem;
+    }
+    
+    .nombre-modelo {
+        font-size: 0.8rem;
+    }
+}
+
+/* Para pantallas extremadamente pequeñas (menos de 360px) */
+@media (max-width: 360px) {
+    .grid-modelos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .imagen-reloj {
+        padding: 8px;
+    }
+    
+    .titulo-seccion {
+        font-size: 1.3rem;
+        margin-bottom: var(--espaciado-mediano);
+    }
+    
+    .titulo-seccion::after {
+        width: 60px;
+        height: 2px;
+        bottom: -8px;
+    }
+}

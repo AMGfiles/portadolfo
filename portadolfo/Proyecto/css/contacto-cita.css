@@ -1,0 +1,365 @@
+/* ===== Dark Elegant Theme ===== */
+:root {
+    /* Color Palette */
+    --color-primary: #2a2a2a;
+    --color-secondary: #333333;
+    --color-card: #3a3a3a;
+    --color-accent: #c0a062;
+    --color-accent-light: #d4b87e;
+    --color-text: #f5f5f5;
+    --color-text-secondary: #cccccc;
+    --color-border: #444444;
+    --color-success: #5cb860;
+    --color-white: #ffffff;
+    
+    /* Typography */
+    --font-display: 'Red Hat Display', sans-serif;
+    --font-body: 'Red Hat Text', sans-serif;
+    
+    /* Spacing */
+    --spacing-xl: 4rem;
+    --spacing-lg: 2.5rem;
+    --spacing-md: 1.5rem;
+    --spacing-sm: 1rem;
+    --spacing-xs: 0.5rem;
+    
+    /* Effects */
+    --border-radius: 8px;
+    --border-radius-lg: 12px;
+    --shadow-sm: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.15);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  }
+  
+  /* ===== Base Styles ===== */
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    background-color: var(--color-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--color-text);
+    margin-top: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ===== Main Container ===== */
+  .cita-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+  
+  /* ===== Information Section ===== */
+  .informacion-cita {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-lg) 0;
+    margin: var(--spacing-xl) 0;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .informacion-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .informacion-cita h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .informacion-cita h2 i {
+    color: var(--color-accent);
+  }
+  
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--spacing-md);
+  }
+  
+  .info-card {
+    background-color: var(--color-card);
+    padding: var(--spacing-md);
+    border-radius: var(--border-radius);
+    border-left: 3px solid var(--color-accent);
+    transition: var(--transition);
+  }
+  
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .info-card i {
+    font-size: 2rem;
+    color: var(--color-accent);
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .info-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .info-card p {
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+  
+  /* ===== Appointment Form ===== */
+  .formulario-cita {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+  }
+  
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .formulario-cita h2 {
+    text-align: center;
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.8rem;
+  }
+  
+  .form-subtitle {
+    text-align: center;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+  }
+  
+  form {
+    margin-top: var(--spacing-md);
+  }
+  
+  .form-group {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-row {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .form-row .form-group {
+    flex: 1;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  input[type="tel"]:focus,
+  input[type="date"]:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--color-accent);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(192, 160, 98, 0.2);
+  }
+  
+  textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* ===== Buttons ===== */
+  .btn-generar-cita {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+  }
+  
+  .btn-generar-cita:hover {
+    background-color: var(--color-accent-light);
+    transform: translateY(-2px);
+  }
+  
+  /* ===== Confirmation Section ===== */
+  .confirmacion-cita {
+    background-color: var(--color-secondary);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+  }
+  
+  .confirmacion-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .confirmacion-icon {
+    font-size: 3.5rem;
+    color: var(--color-success);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .confirmacion-cita h2 {
+    color: var(--color-success);
+    margin-bottom: var(--spacing-sm);
+    font-size: 1.8rem;
+  }
+  
+  .confirmacion-cita p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-text-secondary);
+    font-size: 1.1rem;
+  }
+  
+  .btn-descargar-pdf {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .btn-descargar-pdf:hover {
+    background-color: var(--color-accent-light);
+    transform: translateY(-2px);
+  }
+  
+  .confirmacion-nota {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    font-style: italic;
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 992px) {
+    :root {
+      --spacing-xl: 3.5rem;
+      --spacing-lg: 2.25rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    :root {
+      --spacing-xl: 3rem;
+      --spacing-lg: 2rem;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: var(--spacing-md);
+    }
+    
+    .informacion-cita h2,
+    .formulario-cita h2,
+    .confirmacion-cita h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    :root {
+      --spacing-xl: 2.5rem;
+      --spacing-lg: 1.75rem;
+      --spacing-md: 1.25rem;
+    }
+    
+    .info-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .btn-generar-cita,
+    .btn-descargar-pdf {
+      padding: 12px 24px;
+    }
+    
+    .informacion-cita h2,
+    .formulario-cita h2,
+    .confirmacion-cita h2 {
+      font-size: 1.4rem;
+    }
+    
+    .form-subtitle,
+    .confirmacion-cita p {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    :root {
+      --spacing-md: 1rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    select,
+    textarea {
+      padding: 10px;
+    }
+  }
